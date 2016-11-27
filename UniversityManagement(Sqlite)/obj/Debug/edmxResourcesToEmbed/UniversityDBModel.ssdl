@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversityDBModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=H:\work(26.11.16)\UniversityManagement(Sqlite)\UniversityManagement(Sqlite)\bin\Debug\Data\UniversityDB.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="StudentInfo">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Semester" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UniversityDBModelStoreContainer">
+    <EntitySet Name="StudentInfo" EntityType="Self.StudentInfo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
